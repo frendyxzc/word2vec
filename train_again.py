@@ -10,6 +10,7 @@ def main():
     sentences = word2vec.Text8Corpus("wiki_seg.txt")
     model = word2vec.Word2Vec.load('wiki.zh.model')
     model.train(sentences, total_examples = model.corpus_count, epochs=model.iter)
+    model.save('wiki.zh.model')
 
 if __name__ == "__main__":
     main()
